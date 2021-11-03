@@ -1,0 +1,174 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+a, a:visited {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $secondary_color;
+  height: 100vh;
+  color: $blue_grey;
+  & h1, & h2 {
+    font-weight: 500;
+  }
+  & h1, & h2, p {
+    margin: 0;
+  }
+}
+
+#app {
+  height: 100%;
+}
+
+// Écran de chargement
+.tman {
+  height: 100vh;
+  width: 100%;
+  background-color: $main_color;
+  img {
+    width: 500px;
+  }
+}
+
+.card {
+  background-color: $main_color;
+  border: $card_border;
+  border-radius: $card_border_radius;
+  box-shadow: 0 0 30px -20px rgba(0,0,0,0.5);
+  -webkit-box-shadow: 0 0 30px -20px rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 0 30px -20px rgba(0,0,0,0.5);
+}
+
+.d-none {
+  display: none;
+}
+
+.main-container {
+  width: calc(100vw - $navigation_width);
+  height: calc(100% - $global_margin_top);
+  transition: width .5s ease-in-out;
+  gap: 45px;
+  margin: $global_margin_top $svg_border_length_padding 0 $svg_border_length_padding;
+}
+
+header, main {
+  width: 100%;
+}
+
+main {
+  gap: 20px;
+  margin-bottom: $app_margin_bottom;
+  max-height: calc(100vh - $app_margin_bottom - $header_height - $global_margin_top);
+  flex-grow: 1;
+}
+
+.svg {
+  width: $svg_border_length;
+  height: $svg_border_length;
+  & svg {
+    fill: currentColor;
+  }
+  &.pause, &.add, &.arrow {
+    svg {
+      stroke: currentColor;
+    }
+  }
+  &.play-inside {
+    transform: translate(-1px, -1px);
+  }
+}
+
+.circle-btn {
+  width: calc($svg_border_length + 10px);
+  height: calc($svg_border_length + 10px);
+  border-radius: $svg_border_length;
+  border: none;
+  & svg {
+    width: calc($svg_border_length - 5px);
+    height: $svg_border_length;
+  }
+}
+
+.btn {
+  height: $btn_height;
+  box-sizing: border-box;
+  cursor: pointer;
+  &.search {
+    border: $btn_border;
+  }
+  &.rounded {
+    border-radius: $btn_border_radius_rounded;
+  }
+  &.magic-button {
+    height: $magic_btn_height;
+    width: $magic_btn_width;
+    border: $magic_btn_border;
+    background: $magic_btn_color;
+    font-weight: 600;
+    font-size: 23px;
+    color: $magic_btn_color_text;
+    transform: translateX($svg_border_length);
+    border-radius: 0 calc($magic_btn_height / 2) calc($magic_btn_height / 2) 0;
+    & .svg {
+      border-radius: $btn_border_radius_rounded;
+      border: $magic_btn_svg_border solid $pastel_blue;
+      background-color: $pastel_blue;
+      width: $magic_btn_svg_border_length;
+      height: $magic_btn_svg_border_length;
+      position: relative;
+      left: - calc(3 * $svg_border_length);
+      & svg {
+        transition: all .1s ease-in-out;
+        fill: currentColor;
+      }
+    }
+    & div:last-child {
+      width: calc(100% - $magic_btn_svg_border_length * 3);
+      transform: translateX(- $magic_btn_svg_border_length * 1.5);
+      white-space: nowrap;
+      &.play {
+        transform: translateX(- $magic_btn_svg_border_length / 2);
+      }
+    }
+    &.right {
+      transform: translateX(- $svg_border_length);
+      background: $magic_btn_color_reversed;
+      border-radius: calc($magic_btn_height / 2) 0 0 calc($magic_btn_height / 2);
+      & .svg {
+        left: calc(100% - $svg_border_length);
+      }
+      & p {
+        font-size: 24px;
+      }
+    }
+    &:hover {
+      & svg {
+        transform: scale(125%);
+      }
+    }
+  }
+  &.blue {
+    background-color: $pastel_blue;
+    border: 1px solid rgba($color: $pastel_blue, $alpha: .08);
+  }
+  &.transparent {
+    background-color: transparent;
+    border: 1px solid rgba($color: $pastel_blue, $alpha: .15);
+    color: rgba($color: $pastel_blue, $alpha: .55);
+    & p {
+      padding: 10px 7px;
+    }
+  }
+}
+
+.falcon-heavy {
+  width:155.472px; 
+  height:363.869px;
+}

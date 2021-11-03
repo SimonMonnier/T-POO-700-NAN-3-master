@@ -1,0 +1,52 @@
+.user-list {
+  width: 60vw;
+  margin-top: 8vh;
+  height: 70vh;
+  color: $grey_light;
+  .user-btn {
+    border-radius: 8px;
+    border: 2px solid $grey_dark;
+    background-color: white;
+    padding: 5px 15px;
+    font-size: 18px;
+    &.head {
+      border: 2px solid $grey;
+    }
+  }
+  .content-head {
+    margin-bottom: 25px;
+    button {
+      margin-right: 35px;
+      & .circle-btn {
+        margin-left: 15px;
+        background-color: $grey;
+      }
+    }
+  }
+  .content {
+    overflow-y: scroll;
+    height: 60vh;
+    .user {
+      padding: 5px 25px;
+      margin-right: 25px;
+      height: 60px;
+      margin-bottom: 15px;
+      & .username {
+        font-size: 22px;
+      }
+      & button {
+        color: currentColor;
+        margin-left: 15px;
+        &.state-clock {
+          width: 300px;
+          & .circle-btn svg {
+            width: 15px;
+          }
+        }
+      }
+      & .actions {
+        justify-self: flex-end;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+header {
+  z-index: 1;
+  width: calc(100% + $svg_border_length_padding);
+  margin-right: $svg_border_length_padding;
+  height: $header_height;
+  & .burger-menu.svg {
+    position: relative;
+    left: calc($svg_border_length_padding/2 - $svg_border_length/2);
+    background-color: transparent;
+    border: none;
+    border-radius: $btn_border_radius;
+    & label {
+      padding: 5px;
+      margin: -5px;
+    }
+    &:hover, & label:hover {
+      cursor: pointer;
+    }
+  }
+  & .header-container {
+    width: 100%;
+    margin-left: calc($svg_border_length_padding - $svg_border_length);
+    & h1 {
+      width: 30%;
+      position: relative;
+      margin: 0;
+      font-size: 22px;
+      font-weight: 500;
+      left: 0;
+    }
+    & .search {
+      cursor: text;
+      width: $searchbar_width;
+      margin: 0 calc(20%/2);
+      background-color: rgba($color: $searchbar_background, $alpha: 1.0);
+      color: $blue_grey_light;
+      transition: all .2s linear;
+      & #search-input::placeholder {
+        color: $blue_grey_light;
+        transition: all .2s linear;
+      }
+      &:hover, &:active, &.focus {
+        background-color: rgba($color: $searchbar_background_hover, $alpha: 1.0);
+        color: $blue_grey_darker;
+        box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 5px 15px -5px rgba(0,0,0,0.75);
+        & #search-input::placeholder {
+          color: currentColor;
+        }
+      }
+      & #search-input {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        height: 100%;
+      }
+      & hr {
+        border: none;
+        border-right: 1px solid $blue_grey_light;
+        height: 50%;
+      }
+      & .svg {
+        margin-left: $searchbar_margin_left;
+        & svg {
+          fill: $blue_grey_darker;
+        }
+      }
+    }
+    & .user {
+      width: 30%;
+      gap: 15px;
+      & button, & p, & .avatar {
+        cursor: pointer;
+      }
+      & button{
+        background: none;
+        border: none;
+        &::before {
+          content: "";
+          border: solid $grey;
+          border-width: 0 2px 2px 0;
+          box-sizing: border-box;
+          width: 11.5px;
+          height: 11.5px;
+          display: inline-block;
+          transform: rotate(45deg);
+        }
+        &:hover {
+          &::before {
+            border: solid $grey_dark;
+            border-width: 0 2px 2px 0;
+          }
+        }
+      }
+      & p {
+        margin: 0;
+        font-size: 18px;
+      }
+      & .avatar {
+        width: 45px;
+        height: 45px;
+        box-sizing: border-box;
+        background-color: white;
+        border: 1px solid rgba($color: white, $alpha: .75) !important;
+      }
+    }
+  }
+}

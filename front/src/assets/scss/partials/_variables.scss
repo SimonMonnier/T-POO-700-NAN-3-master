@@ -1,0 +1,88 @@
+$main_color: rgb(255, 255, 255);
+$secondary_color: rgb(246, 248, 250);
+
+// Generic colors
+$grey: rgb(233,233,233);
+$grey_light: rgba(75,85,99);
+$grey_lighter: rgb(247,248,250);
+$grey_dark: rgb(200,200,200);
+$grey_darker: rgb(177, 177, 177);
+$medium_grey: rgb(112,112,112);
+$pastel_red: rgb(234,86,86);
+$pastel_red_dark: rgb(189, 72, 72);
+$blue_grey: rgb(75,85,99);
+$blue_grey_dark: rgb(70, 79, 92);
+$blue_grey_darker: rgb(62, 70, 82);
+$blue_grey_light: rgb(187, 197, 213);
+$blue_grey_lighter: rgb(234, 228, 249);
+$blue_light_grey: rgb(219,221,224);
+$pastel_blue: rgb(13, 118, 217);
+$pastel_green: rgb(77, 192, 27);
+$pastel_green_dark: rgb(75, 185, 28);
+$pastel_blue_dark: rgb(13, 109, 200);
+$yellow: rgb(255, 214, 89);
+$yellow_dark: rgb(255, 193, 7);
+
+// Text colors associated to generic colors
+$pastel_red_text: rgba($color: rgb(255, 255, 255), $alpha: 1);
+$pastel_blue_text: rgba($color: rgb(255, 255, 255), $alpha: 1);
+
+$global_margin_top: 20px;
+$app_margin_bottom: 45px;
+$header_height: 45px;
+$navigation_width_fixed: 270px;
+$navigation_width: 20vw;
+
+// SVG
+$svg_border_length: 25px;
+$svg_border_length_padding: calc(2*$svg_border_length + 15px);
+$svg_base_color: rgba($color: $grey_light, $alpha: .65);
+
+// Card
+$card_height: 100%;
+$card_border: 2px solid $grey;
+$card_border_radius: 20px;
+$card_border_padding: 22px;
+$card_gap: 7px;
+$card_text_height: 30px;
+
+// Buttons
+$btn_hover_color: $grey;
+$btn_border_radius: 7px;
+$btn_height: 45px;
+// Rounded buttons
+$btn_border_radius_rounded: 999px;
+// Magic Button
+$magic_btn_height: 66px;
+$magic_btn_width: 316px;
+$magic_btn_color: linear-gradient(to left, $pastel_blue, $pastel_blue_dark);
+$magic_btn_color_green: linear-gradient(to left, $pastel_green, $pastel_green_dark);
+$magic_btn_color_reversed: linear-gradient(to right, $pastel_blue, $pastel_blue_dark);
+$magic_btn_color_text: $pastel_blue_text;
+$magic_btn_border: 3px solid $pastel_blue;
+$magic_btn_svg_border_length: 48px;
+$magic_btn_svg_border: 21px;
+
+// Links
+$link_width: calc($navigation_width - 54px);
+$link_width_fixed: calc($navigation_width_fixed - 54px);
+$link_width_wrapped: $svg_border_length_padding;
+$link_text_color: $blue_grey;
+$hr_separator_color: $blue_light_grey;
+$hr_separator_opacity: .45;
+$gap_between_links: 27px;
+$link_left_padding: 5%;
+$link_right_margin: 10%;
+
+// Search bar
+$btn_border: 1px solid rgba($color: $medium_grey, $alpha: .1);
+$searchbar_background: $grey_lighter;
+$searchbar_background_hover: $main_color;
+$searchbar_width: 250px;
+$searchbar_margin_left: 18px;
+
+// Scroll bar
+$scrollbar_width: 3px;
+$scrollbar_color: $blue_grey;
+$scrollbar_color_hover: $blue_grey_dark;
+$scrollbar_color_active: $blue_grey_darker;

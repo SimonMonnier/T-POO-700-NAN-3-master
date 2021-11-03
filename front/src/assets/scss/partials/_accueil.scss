@@ -1,0 +1,32 @@
+.welcome {
+  width: 100%;
+  & .falcon-heavy, & .welcome-container {
+    z-index: 1;
+  }
+  & .welcome-container {
+    position: relative;
+    top: -55px;
+    & h1 {
+      font-size: 57px;
+      margin-bottom: 35px;
+    }
+    & h2 {
+      font-size: 44px;
+      margin-bottom: 75px;
+    }
+  }
+  & .gotham-skyline {
+    z-index: 0;
+    width: calc(100vw - $navigation_width + $svg_border_length) !important;
+    // background-color: #2559CD; // TEMPORAIRE, UNIQUEMENT EN DARK MODE
+    position: absolute;
+    left: calc($navigation_width - $svg_border_length);
+    bottom: 0;
+    & #bat {
+      fill: white;
+    }
+    & #skyline {
+      fill: transparent;
+    }
+  }
+}

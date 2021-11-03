@@ -1,0 +1,78 @@
+.working-times {
+  & .card {
+    width: 60vw;
+    box-sizing: border-box;
+    padding: 0 25px;
+    border-radius: 13px;
+    &.content-header {
+      & .username {
+        gap: 15px;
+        height: 70px;
+        & span {
+          background-color: $grey;
+        }
+      }
+      & .hours-summary {
+        gap: 15px;
+        & p:first-child {
+          font-weight: 600;
+          font-size: 20px;
+        }
+      }
+    }
+    &.day-picker {
+      height: 15vh;
+      width: 100%;
+      & .day-picker-header {
+        height: calc(50% - .5px);
+        & div:first-child {
+          gap: 25px;
+        }
+        & .display-method {
+          gap: 15px;
+          margin-right: 50px;
+        }
+      }
+      & .day-picker-content {
+        height: calc(50% - .5px);
+      }
+    }
+    &.working-times-list {
+      margin-bottom: 25px;
+      & .day-selected {
+        padding: 15px 0 5px 0;
+        background-color: #fff;
+      }
+      & .list {
+        height: calc(50vh - 20px);
+        margin-bottom: 20px;
+        overflow-y: scroll;
+        padding-right: 20px;
+        & .hours {
+          height: 50px;
+          padding: 3px 15px;
+          border-radius: 8px;
+          & div {
+            gap: 15px;
+            & hr {
+              height: 20px;
+              width: 2px;
+              border: none;
+              border-radius: 5px;
+              background-color: $grey_dark;
+            }
+          }
+          &:hover {
+            background-color: rgba($color: $grey, $alpha: .5);
+            & button {
+              background-color: $grey_dark;
+              &:hover {
+                background-color: $grey_darker;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

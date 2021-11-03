@@ -1,0 +1,119 @@
+$breakpointsHeight: (
+  400px: 30px,
+  425px: 30px,
+  450px: 30px,
+  475px: 30px,
+  500px: 30px,
+  525px: 30px,
+  550px: 30px,
+  575px: 30px,
+  600px: 30px,
+  625px: 55px,
+  650px: 80px,
+  675px: 105px,
+  700px: 130px,
+  725px: 155px,
+  750px: 180px,
+  775px: 205px,
+  800px: 230px,
+  825px: 255px,
+  850px: 280px,
+  875px: 305px,
+  900px: 330px,
+  925px: 355px,
+  950px: 380px,
+  975px: 380px,
+);
+@each $height, $size in $breakpointsHeight {
+  @media (min-height:$height) and (max-height: calc($height + 25px)) {
+    .description {
+      height: $size;
+    }
+  }
+}
+@media (max-width: 1350px) {
+  .navigation {
+    width: $navigation_width_fixed;
+    & .nav-bar .nav-links a {
+      width: $link_width_fixed;
+    }
+  }
+}
+
+.navigation {
+  // Navbar wrapping animation
+  // border-right: 1px solid rgba($color: $grey_light, $alpha: .15); // Optionnel
+  &.wrapped {
+    width: calc(2 * $svg_border_length + $svg_border_length_padding / 2);
+    & .nav-bar {
+      margin-left: 0;
+      margin-right: 0;
+      // background-color: black; // TODO : comment
+      & nav-header {
+        width: 100%;
+      }
+      & .tman-vignette {
+        width: 90%;
+        margin: 0 10%;
+      }
+      & .tman-typo {
+        opacity: 0;
+      }
+      & .nav-links {
+        & a, & a:hover, & a.router-link-active {
+          background-color: transparent;
+        }
+        & a {
+          & .svg {
+            padding: 7px;
+            margin-left: 20px;
+          }
+          & p {
+            overflow-x: hidden;
+            margin-right: 100%;
+          }
+          &:hover {
+            & .svg {
+              background-color: $btn_hover_color;
+            }
+          }
+          &.router-link-active {
+            & .svg {
+              background-color: $pastel_red;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-container.navbarWrapped {
+  width: calc(100vw - calc(2 * $svg_border_length + $svg_border_length_padding / 2));
+}
+
+.a2.cta {
+  .magic-button.phone, .magic-button.survey {
+    &.green {
+      &.survey {
+        font-size: 24px;
+      }
+      background: $magic_btn_color_green;
+      border: 3px solid $pastel_green;
+      & .svg {
+        background-color: $pastel_green;
+        border: $magic_btn_svg_border solid $pastel_green;
+        & svg {
+          width: auto;
+          height: 45px;
+        }
+      }
+    }
+    font-size: 28px;
+    & p {
+      position: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
